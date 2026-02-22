@@ -1,4 +1,4 @@
-## GmList.Task.Manager 📝
+# GmList Task Manager 📝
 A simple and efficient task manager built with Python and PyQt. Manage your tasks easily with a clean GUI, full editing, and advanced filtering options.
 
 ## Features
@@ -28,14 +28,14 @@ A simple and efficient task manager built with Python and PyQt. Manage your task
 - Search tasks with the built-in search box.
 - Save and load tasks manually using the provided buttons to store or retrieve JSON files.
 
-## Technologies
-![Python](https://www.python.org/)
-![PyQt](https://www.qt.io/)
-
-## License
-GmList © 2026 by Gm is licensed under CC BY-SA 4.0
-
 ## Notes 💡
 - All icons and assets are included in the main folder for easy loading.
 - Paths in the code are case-sensitive; ensure folder names match.
 - Designed for productivity and simplicity.
+
+## Technologies
+- [Python](https://www.python.org/)  
+- [PyQt](https://www.qt.io/)
+
+## License
+GmList © 2026 by Gm is licensed under CC BY-SA 4.0
