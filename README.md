@@ -17,7 +17,7 @@ A simple and efficient task manager built with Python and PyQt. Manage your task
 ## Installation
 - 1. Download the latest Release from the Releases section.
 - 2. Extract the ZIP file.
-- 3. Run the executable (GmList.Task.Manager.exe) for Windows.
+- 3. Run the executable (GmList.exe) for Windows.
 > ⚠️ Currently Windows only. Linux/macOS versions are not provided.
 
 ## Usage
