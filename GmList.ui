@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1415</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GmList</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ui_resources.qrc">
+    <normaloff>:/GmList-Icon.png</normaloff>:/GmList-Icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="7">
+     <widget class="QPushButton" name="selectAllButton">
+      <property name="toolTip">
+       <string>Select All (Ctrl+A)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/select-all-icon.png</normaloff>:/select-all-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+A</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="20" colspan="5">
+     <widget class="QLineEdit" name="searchLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Search Tasks</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Search Tasks...</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="addButton">
+      <property name="toolTip">
+       <string>Add New Task (Ctrl+Shift+N)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/add-icon.png</normaloff>:/add-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Shift+N</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="17">
+     <widget class="QComboBox" name="filterComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Filter</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>All</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Only Completed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Only Pending</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QPushButton" name="removeButton">
+      <property name="toolTip">
+       <string>Remove Selected Task (Ctrl+R)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/remove-icon.png</normaloff>:/remove-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+R</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="19">
+     <widget class="QComboBox" name="priorityFilterComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Filter With Priority</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>All</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="10">
+     <widget class="QPushButton" name="reminderButton">
+      <property name="toolTip">
+       <string>Reminder</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/timer-icon.png</normaloff>:/timer-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="saveButton">
+      <property name="toolTip">
+       <string>Save ToDoList (Ctrl+S)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/save-icon.png</normaloff>:/save-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+S</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="25">
+     <widget class="QTableWidget" name="todolist">
+      <column>
+       <property name="text">
+        <string>Task</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Start</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>End</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Duration</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Done</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Tag</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Priority</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="0" column="18">
+     <widget class="QComboBox" name="tagFilterComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Filter With Tag</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>All</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Work</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Personal</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Important</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Urgent</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>University</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shopping</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Exercise</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Project</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meeting</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="16">
+     <widget class="QComboBox" name="sortComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>220</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>Sort</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Custom Order</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>A → Z</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Z → A</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Earliest → Latest</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Latest → Earliest</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shortest Duration → Longest Duration</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Longest Duration → Shortest Duration</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="15">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="9">
+     <widget class="QPushButton" name="moveDownButton">
+      <property name="toolTip">
+       <string>Move Down (Ctrl+Down)</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/down-icon.png</normaloff>:/down-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Down</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="markAsDoneButton">
+      <property name="toolTip">
+       <string>Mark Selected Task as Done (Ctrl+D)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/mark-icon.png</normaloff>:/mark-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+D</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="13">
+     <widget class="QPushButton" name="aboutQtButton">
+      <property name="toolTip">
+       <string>About Qt</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/qt-icon.png</normaloff>:/qt-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="loadButton">
+      <property name="toolTip">
+       <string>Open ToDoList (Ctrl+O)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/open-icon.png</normaloff>:/open-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+O</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="11">
+     <widget class="QPushButton" name="soundButton">
+      <property name="toolTip">
+       <string>Mute / Unmute</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/unmute-icon.png</normaloff>:/unmute-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="8">
+     <widget class="QPushButton" name="moveUpButton">
+      <property name="toolTip">
+       <string>Move Up (Ctrl+Up)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/up-icon.png</normaloff>:/up-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Up</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QPushButton" name="markAsPendingButton">
+      <property name="toolTip">
+       <string>Mark Selected Task As Pending (Ctrl+Shift+D)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/pending-icon.png</normaloff>:/pending-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+Shift+D</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="newButton">
+      <property name="toolTip">
+       <string>Create New ToDoList (Ctrl+N)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/new-icon.png</normaloff>:/new-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Ctrl+N</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="12">
+     <widget class="QPushButton" name="aboutButton">
+      <property name="toolTip">
+       <string>About GmList</string>
+      </property>
+      <property name="icon">
+       <iconset resource="ui_resources.qrc">
+        <normaloff>:/info-icon.png</normaloff>:/info-icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1415</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <tabstops>
+  <tabstop>newButton</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>markAsDoneButton</tabstop>
+  <tabstop>markAsPendingButton</tabstop>
+  <tabstop>removeButton</tabstop>
+  <tabstop>selectAllButton</tabstop>
+  <tabstop>moveUpButton</tabstop>
+  <tabstop>moveDownButton</tabstop>
+  <tabstop>reminderButton</tabstop>
+  <tabstop>soundButton</tabstop>
+  <tabstop>aboutButton</tabstop>
+  <tabstop>aboutQtButton</tabstop>
+  <tabstop>sortComboBox</tabstop>
+  <tabstop>filterComboBox</tabstop>
+  <tabstop>tagFilterComboBox</tabstop>
+  <tabstop>priorityFilterComboBox</tabstop>
+  <tabstop>searchLineEdit</tabstop>
+  <tabstop>todolist</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ui_resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

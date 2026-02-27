@@ -1,0 +1,29 @@
+<RCC>
+  <qresource>
+    <file alias="GmList.ui">GmList.ui</file>
+	<file alias="AboutProgramDialog.ui">AboutProgramDialog.ui</file>
+	
+	<file alias="GmList-Icon.png">Icons/GmList-Icon.png</file>
+	<file alias="GmList-Icon.ico">GmList-Icon.ico</file>
+	
+	<file alias="add-icon.png">Icons/add-icon.png</file>
+    <file alias="remove-icon.png">Icons/remove-icon.png</file>
+    <file alias="mark-icon.png">Icons/mark-icon.png</file>
+	<file alias="new-icon.png">Icons/new-icon.png</file>
+	<file alias="save-icon.png">Icons/save-icon.png</file>
+    <file alias="open-icon.png">Icons/open-icon.png</file>
+	<file alias="up-icon.png">Icons/up-icon.png</file>
+    <file alias="down-icon.png">Icons/down-icon.png</file>
+	<file alias="select-all-icon.png">Icons/select-all-icon.png</file>
+    <file alias="pending-icon.png">Icons/pending-icon.png</file>
+	<file alias="qt-icon.png">Icons/qt-icon.png</file>
+	<file alias="info-icon.png">Icons/info-icon.png</file>
+	<file alias="timer-icon.png">Icons/timer-icon.png</file>
+	<file alias="mute-icon.png">Icons/mute-icon.png</file>
+	<file alias="unmute-icon.png">Icons/unmute-icon.png</file>
+	
+	
+
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>
