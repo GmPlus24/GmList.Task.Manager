@@ -1,0 +1,31 @@
+<RCC>
+  <qresource>
+    <file alias="gmlist_ui.ui">gmlist_ui.ui</file>
+	<file alias="about_program_dialog.ui">about_program_dialog.ui</file>
+	
+	<file alias="gmlist_icon.png">icons/gmlist_icon.png</file>
+	<file alias="gmlist_icon.ico">icons/gmlist_icon.ico</file>
+	
+	<file alias="ring_sound_effect.wav">sounds/ring_sound_effect.wav</file>
+	
+	<file alias="add_icon.png">icons/add_icon.png</file>
+    <file alias="remove_icon.png">icons/remove_icon.png</file>
+    <file alias="mark_icon.png">icons/mark_icon.png</file>
+	<file alias="new_icon.png">icons/new_icon.png</file>
+	<file alias="save_icon.png">icons/save_icon.png</file>
+    <file alias="open_icon.png">icons/open_icon.png</file>
+	<file alias="up_icon.png">icons/up_icon.png</file>
+    <file alias="down_icon.png">icons/down_icon.png</file>
+	<file alias="select_all_icon.png">icons/select_all_icon.png</file>
+    <file alias="pending_icon.png">icons/pending_icon.png</file>
+	<file alias="qt_icon.png">icons/qt_icon.png</file>
+	<file alias="info_icon.png">icons/info_icon.png</file>
+	<file alias="timer_icon.png">icons/timer_icon.png</file>
+	<file alias="mute_icon.png">icons/mute_icon.png</file>
+	<file alias="unmute_icon.png">icons/unmute_icon.png</file>
+	
+	
+
+  </qresource>
+  <qresource prefix="newPrefix"/>
+</RCC>
